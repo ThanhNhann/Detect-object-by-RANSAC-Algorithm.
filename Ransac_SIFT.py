@@ -1,16 +1,11 @@
 
 # coding: utf-8
 
-# In[211]:
-
 
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import random
-
-
-# In[212]:
 
 
 sift = cv2.xfeatures2d.SIFT_create()
@@ -52,9 +47,6 @@ point2 = np.hstack((point2,np.ones((point2.shape[0],1))))
 
 
 
-# In[213]:
-
-
 #Initialize variable
 threshold = 5
 inliner = 0
@@ -87,9 +79,6 @@ for i in range(10000):
     
 
 
-# In[214]:
-
-
 #Get corner
 lt = (H).dot(np.array([[0,0,1]]).T)
 rt = (H).dot(np.array([[img2.shape[1],0,1]]).T)
@@ -97,8 +86,6 @@ rb = (H).dot(np.array([[img2.shape[1],img2.shape[0],1]]).T)
 lb = (H).dot(np.array([[0,img2.shape[0],1]]).T)
 
 
-
-# In[217]:
 
 
 #Draw boudingbox
